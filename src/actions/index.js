@@ -1,11 +1,12 @@
-// export const setCharacters = (payload) => ({
-//     type: 'SET_CHARACTERS',
-//     payload,
-// })
-
-export const setSection = (payload) => ({
+export const setCharacters = (payload) => ({
     type: 'SET_CHARACTERS',
     payload,
+})
+
+export const setSection = (payload) => ({
+    type: 'SET_SECTION',
+    payload,
+    
 })
 
 // export const setGifs = (payload) => ({
