@@ -2,7 +2,7 @@ import React from 'react'
 
 const GifsCard = ({ id, title, url }) => {
     return (
-        <div className="card text-center bg-dark animate__animated animate__fadeInUp bg-personal mb-2">
+        <div className="card text-center bg-secondary animate__animated animate__fadeInUp bg-personal mb-2">
             <div className="overflow ">
                 <img src={url} alt="a wallpaper" className="card-img-top" />
             </div>

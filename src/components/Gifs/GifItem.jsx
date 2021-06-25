@@ -3,9 +3,10 @@ import GifsCard from './GifsCard';
 import Error from '../plugins/Error';
 import Loader from '../plugins/Loader';
 import { useGetGifs } from '../../custom-hooks/useGetGifs';
+
 const GifItem = ({ item }) => {
 
-    const [error, setError] = useState(false);
+    const [error] = useState(false);
 
     const { data: images, loading } = useGetGifs(item);
 

@@ -18,10 +18,16 @@
   margin-right: 25px;
   font-size: 18px;
   list-style-type: none;
+  margin-top: 2%;
+  //color: $light-color;
 }
 
 .header__nav__options-item.active {
-  color: $primary-color;
+  color: $header-color;
+}
+
+.header__nav__options-item.desactive {
+  color: $light-color;
 }
 
 .header__nav__options-item:last-child {

@@ -1,10 +1,9 @@
 import React from 'react'
-import CharacterList from '../components/CharacterList';
-
+import Marvel from '../components/Marvel/index';
 
 const Characters = () => (
     <section>
-        <CharacterList />
+        <Marvel />
     </section>
 )
 

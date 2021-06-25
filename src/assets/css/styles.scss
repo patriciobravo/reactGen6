@@ -37,3 +37,17 @@
   height: 90%;
   background-color: #ff00ff; /*Tu IMAGEN*/
 }
+
+.btn-group-lg>.btn, .btn-lg {
+  // padding: .5rem 1rem;
+  // font-size: 1.25rem;
+  // line-height: 1.5;
+  // border-radius: .3rem;
+  border-radius: 0% 0% !important;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #3d7cbf !important;
+  border-color: #3d7cbf !important;
+}
