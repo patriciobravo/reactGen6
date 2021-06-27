@@ -6,6 +6,11 @@ const reducer = (state, action) => {
                 ...state,
                 sectionActive: action.payload,
             };
+        case 'SET_FAVORITE':
+            return {
+                ...state,
+                favoriteCharacters: [...state.favoriteCharacters, action.payload],
+            };
         default:
             return state;
     }

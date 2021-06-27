@@ -34,6 +34,6 @@ const MarvelSearch = ({ setHeroe }) => {
     )
 }
 MarvelSearch.propTypes = {
-    setCategories: PropTypes.func.isRequired
+    setHeroe: PropTypes.func.isRequired
 }
 export default MarvelSearch;

@@ -8,7 +8,8 @@ import reducer from './reducers';
 import App from './routes/App';
 
 const initialState = {
-  sectionActive: 'Characters'
+  favoriteCharacters: [],
+  sectionActive: 'Marvel'
 }
 
 const composeEnhanders = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
