@@ -9,8 +9,11 @@ const Modal = (props) =>
 
             <div className="modal">
                 <figure onClick={props.onClose} className="modal__close">
-                    <div className="modal__container">Cerrar</div>
+                <span className="cerrar" aria-hidden="true">&times;</span>
                 </figure>
+                {/* <button type="button" class="close" aria-label="Close">
+                <span className="cerrar" aria-hidden="true">&times;</span>
+                </button> */}
                 <div className="modal__container">{props.children}</div>
             </div>,
             document.getElementById("modal"),

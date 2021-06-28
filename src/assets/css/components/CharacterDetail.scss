@@ -7,10 +7,10 @@
 }
 
 .characterDetail__container {
-  width: 400px;
-  height: 300px;
+  width: 520px;
+  height: 365px;
   padding: 0 35px;
-  background-color: $danger-color;
+  background-color: $modal-color;
 }
 
 .characterDetail__item {
@@ -20,4 +20,31 @@
 .characterDetail__item-type {
   color: $success-color;
   font-weight: bolder;
+}
+
+.characterDetail-img{
+  width:365px;
+}
+
+.modal__close{
+  background-color: $modal-color;
+
+}
+
+.modal__close:hover {
+  background-color: $modal-color;
+  cursor: pointer;
+}
+
+.cerrar{
+  background-color: #fff;
+  border-radius: 17px 17px 17px 17px;
+  padding: 7% 28% 17% 26%;
+}
+
+.characterDetail__description {
+  font-size: 18px;
+  font-family: $title-font;
+  color: $primary-color;
+  text-align: center;
 }

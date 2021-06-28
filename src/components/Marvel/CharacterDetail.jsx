@@ -1,11 +1,14 @@
 import React from "react";
 import "../../assets/css/components/CharacterDetail.scss";
+import Empty from "../plugins/Empty";
+import { ListGroup, ListGroupItem } from "react-bootstrap";
 
 const CharacterDetail = (props) => {
-    const { data } = props;
+    const { data, comics } = props;
     const {
         title,
-        url
+        url,
+        description
     } = data;
 
     return (
@@ -13,27 +16,26 @@ const CharacterDetail = (props) => {
             <img className="characterDetail-img" src={url} alt="Character" />
             <div className="characterDetail__container">
                 <h2 className="characterDetail-name">{title}</h2>
-                {/* <p className="characterDetail__item">
-                    <span className="characterDetail__item-type">Status:</span> {status}
-                </p>
-                <p className="characterDetail__item">
-                    <span className="characterDetail__item-type">Species:</span> {species}
-                </p>
-                <p className="characterDetail__item">
-                    <span className="characterDetail__item-type">Gender:</span> {gender}
-                </p>
-                <p className="characterDetail__item">
-                    <span className="characterDetail__item-type">Origin:</span>{" "}
-                    {origin.name}
-                </p>
-                <p className="characterDetail__item">
-                    <span className="characterDetail__item-type">Last Location:</span>{" "}
-                    {location.name}
-                </p>
-                <p className="characterDetail__item">
-                    <span className="characterDetail__item-type">Episodes:</span>{" "}
-                    {episode.length}
-                </p> */}
+                <div className="characterDetail__item">
+                    <span className="characterDetail__item-type">Descripción:  </span> 
+                        {description === "" ? (
+                            <Empty text="Personaje Sin Descripción" accion="Sin Imagen"/>
+                        ) : (
+                           <span className="characterDetail__description">{description}</span> 
+                        )}
+                </div>
+                             
+                    <ListGroup>    
+      
+                    {
+                    comics.map((item) => ( 
+                        <ListGroupItem key={item.id}>{item.title}</ListGroupItem>
+
+                                   ))}
+                     </ListGroup>
+               
+               
+             
             </div>
         </div>
     );

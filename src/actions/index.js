@@ -14,6 +14,11 @@ export const setFavorite = (payload) => ({
     payload
 })
 
+export const deleteFavorite = (payload) => ({
+    type: 'DELETE_FAVORITE',
+    payload,
+});
+
 // export const setGifs = (payload) => ({
 //     type: 'SET_GIFS',
 //     payload,

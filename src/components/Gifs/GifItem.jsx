@@ -26,6 +26,7 @@ const GifItem = ({ item }) => {
                                     <div className="col-md-4 mt-3" key={img.id}>
                                         <GifsCard
                                             key={img.id}
+                                            data={img}
                                             {...img} />
                                     </div>
 

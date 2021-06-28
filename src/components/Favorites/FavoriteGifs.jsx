@@ -1,10 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
 import "../../assets/css/components/FavoriteList.scss";
-import Character from "../Marvel/Character";
+import GifsCard from "../Gifs/GifsCard";
 import Empty from "../plugins/Empty";
 
-const FavoriteList = (props) => {
+const FavoriteGifs = (props) => {
    
   const { keyTipo, favoriteCharacters } = props;
   console.log(props)
@@ -25,7 +25,7 @@ const FavoriteList = (props) => {
             {
                     result.map((character) => (                                    
                     <div className="col-md-4 mt-3" key={character.data.id}>
-                         <Character key={character.data.id} data={character.data} />
+                         <GifsCard key={character.data.id} data={character.data} />
                     </div>
                
             ))}
@@ -45,4 +45,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, null)(FavoriteList);
+export default connect(mapStateToProps, null)(FavoriteGifs);

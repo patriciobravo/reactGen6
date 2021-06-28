@@ -32,17 +32,17 @@ const Header = () => {
                 <div className="navbar-nav">
 
                     <Link onClick={() => handleSetSection("Marvel")}
-                        activeClassName="active"
+                       
                         className={`header__nav__options-item ${sectionActive === "Marvel" ? "active" : "desactive"
                             }`} to="/">Personajes
                     </Link>
                     <Link onClick={() => handleSetSection("Favorites")}
-                        activeClassName="active"
+                      
                         className={`header__nav__options-item ${sectionActive === "Favorites" ? "active" : "desactive"
                             }`} to="/Favorites">Favoritos
                     </Link>
                     <Link onClick={() => handleSetSection("GifsExpert")}
-                        activeClassName="active"
+                       
                         className={`header__nav__options-item ${sectionActive === "GifsExpert" ? "active" : "desactive"
                             }`} to="/GifsExpert">GifsExpert
                     </Link>
