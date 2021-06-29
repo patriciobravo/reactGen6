@@ -5,6 +5,7 @@ import { ListGroup, ListGroupItem } from "react-bootstrap";
 
 const CharacterDetail = (props) => {
     const { data, comics } = props;
+    console.log(comics)
     const {
         title,
         url,
@@ -17,25 +18,30 @@ const CharacterDetail = (props) => {
             <div className="characterDetail__container">
                 <h2 className="characterDetail-name">{title}</h2>
                 <div className="characterDetail__item">
-                    <span className="characterDetail__item-type">Descripción:  </span> 
-                        {description === "" ? (
-                            <Empty text="Personaje Sin Descripción" accion="Sin Imagen"/>
-                        ) : (
-                           <span className="characterDetail__description">{description}</span> 
-                        )}
+                    <span className="characterDetail__item-type">Descripción:  </span>
+                    {description === "" ? (
+                        <Empty text="Personaje Sin Descripción" accion="Sin Imagen" />
+                    ) : (
+                        <span className="characterDetail__description">{description}</span>
+                    )}
                 </div>
-                             
-                    <ListGroup>    
-      
-                    {
-                    comics.map((item) => ( 
-                        <ListGroupItem key={item.id}>{item.title}</ListGroupItem>
+                <span className="characterDetail__item-type">Comics:  </span>
+                <ListGroup>
 
-                                   ))}
-                     </ListGroup>
-               
-               
-             
+                    {
+                        comics === 'Sin Resultados' ? (
+                            <Empty text="Sin Comics Asociados" accion="Sin Imagen" />
+                        ) : (
+                            comics.map((item) => (
+                                <ListGroupItem key={item.id}>{item.title}</ListGroupItem>
+
+                            ))
+                        )
+                    }
+                </ListGroup>
+
+
+
             </div>
         </div>
     );

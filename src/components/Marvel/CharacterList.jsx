@@ -6,10 +6,11 @@ import Character from './Character';
 import Empty from '../plugins/Empty';
 
 const CharacterList = ({ item }) => {
-    
+
 
     const [error] = useState(false);
     const { data, loading } = useGetMarvel(item);
+
     return (
 
         <div>
@@ -22,17 +23,17 @@ const CharacterList = ({ item }) => {
                     <div className="container d-flex justify-content-center align-items-center h-100">
                         <div className="row">
                             {
-                            data === undefined ? (
-                                <Empty text="Sin Resultados para el Personaje Ingresado"/>
-                            ): data === 'Sin Resultados' ? (
-                                <Empty text="Sin Resultados para el Personaje Ingresado"/>
-                            ) : (
-                                data.map((item) => (                                    
-                                <div className="col-md-4 mt-3" key={item.id}>
-                                    <Character key={item.id} data={item} />
-                                </div>
-                            ))
-                        )}
+                                data === undefined ? (
+                                    <Empty text="Sin Resultados para el Personaje Ingresado" />
+                                ) : data === 'Sin Resultados' ? (
+                                    <Empty text="Sin Resultados para el Personaje Ingresado" />
+                                ) : (
+                                    data.map((item) => (
+                                        <div className="col-md-4 mt-3" key={item.id}>
+                                            <Character key={item.id} data={item} />
+                                        </div>
+                                    ))
+                                )}
                         </div>
                     </div>
 

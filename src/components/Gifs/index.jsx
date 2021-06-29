@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import GifItem from './GifItem';
-import GifsData from './GifsData';
+import GifsSearch from './GifsSearch';
 import '../../assets/css/styles.scss';
 
 const GifExpertsSearch = () => {
@@ -11,7 +11,7 @@ const GifExpertsSearch = () => {
     return (
         <div className="container">
             <h2 className="text-center">Buscar Gif</h2>
-            <GifsData setCategories={setCategories} />
+            <GifsSearch setCategories={setCategories} />
             <hr />
 
             <div className="container d-flex justify-content-center align-items-center h-100">

@@ -1,10 +1,10 @@
 import React from 'react'
-import GifExpertsSearch from '../components/Gifs/GifExpertsSearch';
+import Gif from '../components/Gifs';
 
 export const GifExperts = () => {
     return (
         <section>
-            <GifExpertsSearch />
+            <Gif />
         </section>
     )
 }
