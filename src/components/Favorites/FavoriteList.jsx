@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import propTypes from "prop-types";
 import "../../assets/css/components/FavoriteList.scss";
 import Character from "../Marvel/Character";
 import Empty from "../plugins/Empty";
@@ -7,7 +8,7 @@ import Empty from "../plugins/Empty";
 const FavoriteList = (props) => {
    
   const { keyTipo, favoriteCharacters } = props;
-  console.log(props)
+
   const result = favoriteCharacters.filter(
     (favoriteCharacter) => favoriteCharacter.tipo === keyTipo
   );
@@ -37,6 +38,11 @@ const FavoriteList = (props) => {
 </div>
     
   );
+};
+
+Character.propTypes = {
+  keyTipo: propTypes.string,
+  favoriteCharacters: propTypes.object
 };
 
 const mapStateToProps = (state) => {

@@ -25,3 +25,12 @@
     border-top-left-radius: .25rem;
     border-top-right-radius: .25rem;
 }
+
+.list-group-item {
+  position: relative;
+  display: block;
+  padding: 0rem 0rem; 
+  background-color: transparent !important;
+   border: 0px solid transparent; 
+   color: #0a0a0a;
+}

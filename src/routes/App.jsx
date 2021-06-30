@@ -13,22 +13,23 @@ const Favorites = lazy(() => import("../containers/Favorites"));
 const App = () => (
   <BrowserRouter>
     <Layout>
-      <Switch>
-        <Suspense
+    <Suspense
           fallback={
             <div>
               <Loader />
             </div>
           }
         >
+      <Switch>
+      
           <Route exact path="/" component={Marvel} />
           <Route exact path="/Favorites" component={Favorites} />
           <Route exact path="/GifsExpert" component={GifExperts} />
           <Route path="/404" component={NotFoundPage} />
-          <Redirect to="/404" />
-        </Suspense>
+          <Redirect  exact={true} from="*" to="/404" />      
 
       </Switch>
+      </Suspense>
     </Layout>
   </BrowserRouter>
 )

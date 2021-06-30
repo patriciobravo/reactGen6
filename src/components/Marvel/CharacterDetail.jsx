@@ -1,4 +1,5 @@
 import React from "react";
+import propTypes from "prop-types";
 import "../../assets/css/components/CharacterDetail.scss";
 import Empty from "../plugins/Empty";
 import { ListGroup, ListGroupItem } from "react-bootstrap";
@@ -46,5 +47,10 @@ const CharacterDetail = (props) => {
         </div>
     );
 };
+
+CharacterDetail.propTypes = {
+ 
+    data: propTypes.object
+  };
 
 export default CharacterDetail;

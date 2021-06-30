@@ -1,10 +1,12 @@
 import React from 'react'
 import Marvel from '../components/Marvel/index';
+import { withError } from '../error';
 
 const Characters = () => (
     <section>
-        <Marvel />
+            <Marvel/>
     </section>
 )
 
-export default Characters;
+
+export default withError(Characters);

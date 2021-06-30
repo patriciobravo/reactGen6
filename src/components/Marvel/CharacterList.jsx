@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import Error from '../plugins/Error';
 import Loader from '../plugins/Loader';
 import { useGetMarvel } from '../../custom-hooks/useGetMarvel'
+import propTypes from "prop-types";
 import Character from './Character';
 import Empty from '../plugins/Empty';
 
 const CharacterList = ({ item }) => {
-
 
     const [error] = useState(false);
     const { data, loading } = useGetMarvel(item);
@@ -30,20 +30,21 @@ const CharacterList = ({ item }) => {
                                 ) : (
                                     data.map((item) => (
                                         <div className="col-md-4 mt-3" key={item.id}>
-                                            <Character key={item.id} data={item} />
+                                            <Character key={data.id} data={item} />
                                         </div>
                                     ))
                                 )}
                         </div>
                     </div>
-
                 )
             }
         </div>
-
-
     )
 }
+
+CharacterList.propTypes = {
+    data: propTypes.object,
+};  
 
 export default CharacterList;
 

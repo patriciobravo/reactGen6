@@ -3,6 +3,7 @@ import FavoriteList from "../components/Favorites/FavoriteList";
 import FavoriteGifs from "../components/Favorites/FavoriteGifs";
 import { Tabs, Tab } from "react-bootstrap";
 import "../assets/css/components/FavoriteList.scss";
+import { withError } from '../error';
 
 const Favorites = () => {
 
@@ -39,4 +40,4 @@ const Favorites = () => {
     )
 }
 
-export default Favorites;
+export default withError(Favorites);

@@ -1,5 +1,7 @@
 import React from 'react'
 import Gif from '../components/Gifs';
+import { withError } from '../error';
+
 
 export const GifExperts = () => {
     return (
@@ -8,4 +10,4 @@ export const GifExperts = () => {
         </section>
     )
 }
-export default GifExperts;
+export default withError(GifExperts);
