@@ -1,19 +1,17 @@
 # Proyecto reactgen6 
 
 
-* aplicativo frontend que contiene consumo de 3 apis (busqueda y visualización de personajes de marvel y detalle de comics asociados a cado uno, busquda visualización de gifs. Agregar a favorito de cada api y poder visualizar estos favoritos en tabs asociado a cada una de ellas
+* aplicativo frontend que contiene consumo de 3 apis (busqueda y visualización de personajes de marvel y detalle de comics asociados a cado uno, busqueda visualización de gifs. Agregar a favorito data de cada api y poder visualizar estos en tabs 
 
 * implementacion bootstrap 
 
 * Paleta grafica bajo Sass. 
 
-## Se descargan proyecto dede github 
+## Se descarga proyecto desde github 
 
 https://github.com/patriciobravo/reactGen6.git
 
 cd reactgen6
-
-
 ## Tabla de contenido
 
 1. CARPETA ACTIONS
@@ -22,7 +20,7 @@ cd reactgen6
 
 2. CARPETA ASSETS
 
-* CSS/Componentes: Carpeta donde se almacenaran los estilos asociados a  cada componente.
+* CSS/Componentes: Carpeta donde se almacenaran los estilos asociados a cada componente.
  
 3. CARPETA STATIC
 
@@ -36,7 +34,7 @@ cd reactgen6
 4. 2 Gifs     : Carpeta de componentes asociado a API de Gifs para busqueda de gifs y agregar a favoritos
 4. 3 Marvel   : Carpeta de componante asociado a API de marvel para busqueda de personajes, visualizacion   detalle y agregar a favoritos
 
-4. 4 Plugins  : Carpeta de complementos contiene vistas del Header, Error, datos vacios(Empty), layout(contenedor), y carga de informacion(Loader) del proyecto
+4. 4 Plugins  : Carpeta de complementos contiene vistas del Header, Error, datos vacios(Empty), layout(contenedor), carga de informacion(Loader) del proyecto
  
 5. CARPETA CONTAINER 
 
