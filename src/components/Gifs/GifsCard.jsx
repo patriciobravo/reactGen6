@@ -60,9 +60,7 @@ GifsCard.propTypes = {
 };
 
 
-//export default GifsCard;
 
-// Native functions react-redux (HOC)
 const mapStateToProps = (state) => {
   return {
     favoriteCharacters: state.favoriteCharacters,

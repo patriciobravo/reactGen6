@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-//import { compose } from 'redux';
 import { createStore, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
 import reducer from './reducers';
@@ -20,9 +19,6 @@ if (process.env.NODE_ENV === "development") {
   middlewares.push(logger);
 }
 
-//const composeEnhanders = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-
-//const store = createStore(reducer, initialState, composeEnhanders(applyMiddleware(logger)));
 const store = createStore(
   reducer,
   initialState,

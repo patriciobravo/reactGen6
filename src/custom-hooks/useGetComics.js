@@ -3,7 +3,6 @@ import { getComics } from '../helpers/getComics';
 
 
 export const useGetComics = (item) => {
-    console.log(item)
 
     const [state, setState] = useState({
         data: [],

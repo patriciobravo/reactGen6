@@ -65,9 +65,12 @@ var mapStateToProps = function mapStateToProps(state) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _assets_css_components_FavoriteList_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../assets/css/components/FavoriteList.scss */ "./src/assets/css/components/FavoriteList.scss");
-/* harmony import */ var _Marvel_Character__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Marvel/Character */ "./src/components/Marvel/Character.jsx");
-/* harmony import */ var _plugins_Empty__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../plugins/Empty */ "./src/components/plugins/Empty.jsx");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _assets_css_components_FavoriteList_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../assets/css/components/FavoriteList.scss */ "./src/assets/css/components/FavoriteList.scss");
+/* harmony import */ var _Marvel_Character__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Marvel/Character */ "./src/components/Marvel/Character.jsx");
+/* harmony import */ var _plugins_Empty__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../plugins/Empty */ "./src/components/plugins/Empty.jsx");
+
 
 
 
@@ -77,13 +80,12 @@ __webpack_require__.r(__webpack_exports__);
 var FavoriteList = function FavoriteList(props) {
   var keyTipo = props.keyTipo,
       favoriteCharacters = props.favoriteCharacters;
-  console.log(props);
   var result = favoriteCharacters.filter(function (favoriteCharacter) {
     return favoriteCharacter.tipo === keyTipo;
   });
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, favoriteCharacters.length === 0 || result.length === 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_plugins_Empty__WEBPACK_IMPORTED_MODULE_4__.default, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, favoriteCharacters.length === 0 || result.length === 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_plugins_Empty__WEBPACK_IMPORTED_MODULE_5__.default, {
     text: "No tienes Favoritos"
-  }) : result === [] ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_plugins_Empty__WEBPACK_IMPORTED_MODULE_4__.default, {
+  }) : result === [] ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_plugins_Empty__WEBPACK_IMPORTED_MODULE_5__.default, {
     text: "No tienes Favoritos"
   }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "container d-flex justify-content-center align-items-center h-100"
@@ -93,11 +95,16 @@ var FavoriteList = function FavoriteList(props) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "col-md-4 mt-3",
       key: character.data.id
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Marvel_Character__WEBPACK_IMPORTED_MODULE_3__.default, {
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Marvel_Character__WEBPACK_IMPORTED_MODULE_4__.default, {
       key: character.data.id,
       data: character.data
     }));
   }))));
+};
+
+_Marvel_Character__WEBPACK_IMPORTED_MODULE_4__.default.propTypes = {
+  keyTipo: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string),
+  favoriteCharacters: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().object)
 };
 
 var mapStateToProps = function mapStateToProps(state) {
@@ -121,9 +128,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _components_Favorites_FavoriteList__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Favorites/FavoriteList */ "./src/components/Favorites/FavoriteList.jsx");
 /* harmony import */ var _components_Favorites_FavoriteGifs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Favorites/FavoriteGifs */ "./src/components/Favorites/FavoriteGifs.jsx");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Tabs.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Tab.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Tabs.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Tab.js");
 /* harmony import */ var _assets_css_components_FavoriteList_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../assets/css/components/FavoriteList.scss */ "./src/assets/css/components/FavoriteList.scss");
+/* harmony import */ var _error__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../error */ "./src/error/index.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -142,6 +150,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 var Favorites = function Favorites() {
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('Marvel'),
       _useState2 = _slicedToArray(_useState, 2),
@@ -150,13 +159,13 @@ var Favorites = function Favorites() {
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "container mt-3"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__.default, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default, {
     defaultActiveKey: "Marvel",
     activeKey: key,
     onSelect: function onSelect(k) {
       return setKey(k);
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__.default, {
     eventKey: "Marvel",
     title: "Marvel"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -167,7 +176,7 @@ var Favorites = function Favorites() {
     className: "col-sm-12 mt-3"
   }, key === 'Marvel' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Favorites_FavoriteList__WEBPACK_IMPORTED_MODULE_1__.default, {
     keyTipo: key
-  }) : '')))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default, {
+  }) : '')))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__.default, {
     eventKey: "Gifs",
     title: "Gifs"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -181,7 +190,7 @@ var Favorites = function Favorites() {
   })))))));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Favorites);
+/* harmony default export */ __webpack_exports__["default"] = ((0,_error__WEBPACK_IMPORTED_MODULE_4__.withError)(Favorites));
 
 /***/ }),
 

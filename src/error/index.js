@@ -1,5 +1,4 @@
 import React from 'react';
-//import '../assets/css/error.scss'
 
 export class ErrorComponent extends React.Component {
     state = {

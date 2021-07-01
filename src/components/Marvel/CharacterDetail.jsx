@@ -6,7 +6,6 @@ import { ListGroup, ListGroupItem } from "react-bootstrap";
 
 const CharacterDetail = (props) => {
     const { data, comics } = props;
-    console.log(comics)
     const {
         title,
         url,

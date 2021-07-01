@@ -7,7 +7,6 @@ import Empty from "../plugins/Empty";
 const FavoriteGifs = (props) => {
 
   const { keyTipo, favoriteCharacters } = props;
-  console.log(props)
   const result = favoriteCharacters.filter(
     (favoriteCharacter) => favoriteCharacter.tipo === keyTipo
   );

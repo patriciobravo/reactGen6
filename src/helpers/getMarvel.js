@@ -1,15 +1,11 @@
 import axios from 'axios';
 
 export const getMarvel = async (item) => {
-    console.log(item)
     try {
         const response = await axios.get(`https://gateway.marvel.com/v1/public/characters?nameStartsWith=${item}&apikey=e15712209b92570b132d150ea23bfca9&ts=9&hash=8bfde16caf2f8222f4fb1f04306c4956`);
         const result = response.data.data;
-        console.log(result)
-        console.log(result.results.length)
         if(result.results.length === 0)
         {
-            console.log('Sin datos')
 
         const dataMarvel = "Sin Resultados"
         return dataMarvel;
@@ -17,7 +13,6 @@ export const getMarvel = async (item) => {
         else{
             const dataMarvel = result.results.map(data => {
            
-                console.log(data.thumbnail.path+'.'+data.thumbnail.extension)
                   return {
                       id: data.id,
                       title: data.name,
@@ -27,12 +22,10 @@ export const getMarvel = async (item) => {
               })
             return dataMarvel
         }
-
-       
-       // return dataMarvel;
-
     } catch (error) {
-        console.log(error)
+        //console.log(error)
+        const dataMarvel = "Sin Resultados"
+        return dataMarvel;
     }
 
 

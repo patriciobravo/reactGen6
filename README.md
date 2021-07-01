@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+# Proyecto reactgen6 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+* aplicativo frontend que contiene consumo de 3 apis (busqueda y visualización de personajes de marvel y detalle de comics asociados a cado uno, busquda visualización de gifs. Agregar a favorito de cada api y poder visualizar estos favoritos en tabs asociado a cada una de ellas
 
-In the project directory, you can run:
+* implementacion bootstrap 
 
-### `npm start`
+* Paleta grafica bajo Sass. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Se descargan proyecto dede github 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+https://github.com/patriciobravo/reactGen6.git
 
-### `npm test`
+cd reactgen6
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Tabla de contenido
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. CARPETA ACTIONS
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* ASSETS : Carpeta de acciones del proyecto para saber y mostrar donde estoy posicionado
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. CARPETA ASSETS
 
-### `npm run eject`
+* CSS/Componentes: Carpeta donde se almacenaran los estilos asociados a  cada componente.
+ 
+3. CARPETA STATIC
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+* images : Carpeta donde se almacenaran las imagenes, definidas en el proyecto
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. CARPETA COMPONENTS
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+* COMPONENTS : Carpeta donde almacenara los componentes definidos para este proyecto
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+4. 1 Favorites: Carpeta de componente favoritos de cada api consumida 
+4. 2 Gifs     : Carpeta de componentes asociado a API de Gifs para busqueda de gifs y agregar a favoritos
+4. 3 Marvel   : Carpeta de componante asociado a API de marvel para busqueda de personajes, visualizacion   detalle y agregar a favoritos
 
-## Learn More
+4. 4 Plugins  : Carpeta de complementos contiene vistas del Header, Error, datos vacios(Empty), layout(contenedor), y carga de informacion(Loader) del proyecto
+ 
+5. CARPETA CONTAINER 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* Carpeta contenedor de las diferentes vistas del proyecto
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+6. CARPETA CUSTOM-HOOKS 
 
-### Code Splitting
+* Hooks personalizados para reutilizar 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+7. CARPETA ERROR 
 
-### Analyzing the Bundle Size
+* Carpeta que contiene HOC de ErrorBoundary (límites de error) en el proyecto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+8. CARPETA HELPERS 
 
-### Making a Progressive Web App
+* Carpeta que contiene helpers de marvel y Gifs (funciones que reciben argumento de busqueda y consumo de APIS, procesando y retornando información )
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+9. CARPETA REDUCER
 
-### Advanced Configuration
+* Carpeta que contiene los reducer (funciones reductoras del proyecto)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+10. CARPETA ROUTES 
 
-### Deployment
+* Carpeta almacena las rutas del proyecto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Para instalar todos los paquetes
 
-### `npm run build` fails to minify
+npm i
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Compilación de proyecto
+
+npm run "start": "webpack --mode=development",
+npm run "build": "webpack --mode=production",
+
+## Levantar servidor y visualizar proyecto
+
+npm run "dev-server": "webpack serve"
+
+## url proyecto en vercel
+
+https://reactgen6-hswzjzhag-patriciobravo.vercel.app/
+

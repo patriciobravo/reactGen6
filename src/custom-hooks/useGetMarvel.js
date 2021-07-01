@@ -3,7 +3,6 @@ import { getMarvel } from '../helpers/getMarvel';
 
 
 export const useGetMarvel = (item) => {
-    console.log(item)
 
     const [state, setState] = useState({
         data: [],
